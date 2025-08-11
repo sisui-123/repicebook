@@ -1,0 +1,255 @@
+@import './base.css';
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+/* 全局样式 */
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  max-width: 100%;
+  margin: 0 auto;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 全局卡片样式 */
+.app-card {
+  background: var(--color-surface);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-md);
+  overflow: hidden;
+}
+
+.app-card:active {
+  transform: scale(0.98);
+  box-shadow: var(--box-shadow-sm);
+}
+
+/* 全局按钮样式 */
+.app-button {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.2);
+}
+
+.app-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(255, 140, 66, 0.15);
+}
+
+/* 全局标题样式 */
+.section-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin: var(--spacing-md) 0;
+  color: var(--color-text-primary);
+  position: relative;
+}
+
+/* 覆盖原来的伪元素 */
+.section-title::before {
+  display: none !important;   /* 或者 content: none; */
+}
+
+/* 全局链接样式 */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* 按钮样式 */
+button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+button.secondary {
+  background-color: var(--color-secondary);
+}
+
+button.secondary:hover {
+  background-color: var(--color-secondary-light);
+}
+
+/* 无限滚动加载器 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-lg) 0;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  background-color: rgba(255, 107, 53, 0.1);
+  color: var(--color-primary);
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* 链接样式 */
+.link-more {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+}
+
+/* 图片样式 */
+.app-image {
+  border-radius: var(--image-border-radius);
+  object-fit: cover;
+  box-shadow: var(--image-shadow);
+}
+
+/* 状态栏样式 */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-primary);
+}
+
+/* 头部容器 */
+.header-container {
+  padding: var(--spacing-md) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* 全局搜索栏 */
+.search-bar {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow-xs);
+}
+
+.search-bar i {
+  margin-right: var(--spacing-sm);
+  color: var(--color-text-light);
+}
+
+/* 全局过渡效果 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--transition-normal) ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 列表动画 */
+.list-enter-active,
+.list-leave-active {
+  transition: all var(--transition-normal);
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* 头部和底部 section */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 网格布局 */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  }
+
+/* 响应式媒体查询 */
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+  
+  .recipe-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+}

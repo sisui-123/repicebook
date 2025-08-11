@@ -1,0 +1,71 @@
+:root {
+  /* 主题色 - 调整为更现代的橙色主题 */
+  --color-primary: #FF6B35;
+  --color-primary-light: #FF8C5A;
+  --color-primary-dark: #E55A2B;
+  
+  /* 辅助色 - 更协调的配色方案 */
+  --color-secondary: #2EC4B6;
+  --color-secondary-light: #42D9CB;
+  --color-accent: #FDCA40;
+  
+  /* 中性色 - 更精致的背景和文字颜色 */
+  --color-background: #F8F5F2; /* 更精致的奶白色背景 */
+  --color-surface: #FFFFFF;
+  --color-card-bg: #FFFFFF;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #64748B;
+  --color-text-light: #94A3B8;
+  --color-border: #E2E8F0;
+  
+  /* 状态色 */
+  --color-success: #10B981;
+  --color-success-light: #34D399;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+  
+  /* 边框和圆角 - 更大的圆角使界面更现代 */
+  --border-radius-sm: 8px;
+  --border-radius: 10px;  /* 兼容旧代码 */
+  --border-radius-md: 14px;
+  --border-radius-large: 18px;  /* 兼容旧代码 */
+  --border-radius-lg: 20px;
+  --border-radius-xl: 28px;
+  
+  /* 阴影 - 更细腻的阴影效果 */
+  --box-shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --box-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+  --box-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --box-shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+  
+  /* 字体大小 - 调整字体大小使界面更协调 */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+  --font-size-xxl: 26px;
+  
+  /* 字体权重 */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* 过渡效果 */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+  
+  /* 图片处理 - 更大的圆角提供更现代的外观 */
+  --image-border-radius: var(--border-radius-lg);
+  --image-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+} 
